@@ -1,15 +1,14 @@
-/* Warna dan layout utama */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #0a1f33;
+  background-color: #081b2f;
   color: white;
 }
 
 header {
-  background: #07182c;
-  padding: 20px;
+  background: #0a2744;
+  padding: 25px;
   text-align: center;
   color: #00aaff;
 }
@@ -17,23 +16,26 @@ header {
 .profiles {
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  padding: 20px;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 10px;
 }
 
 .profile {
+  background: #0f2f50;
+  border-radius: 20px;
+  padding: 20px;
+  width: 90%;
+  max-width: 700px;
   display: flex;
   align-items: center;
-  gap: 20px;
-  background: #0e2a47;
-  padding: 15px 20px;
-  border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  gap: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 .foto-profil {
-  width: 90px;
-  height: 90px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   border: 3px solid #00aaff;
   object-fit: cover;
@@ -41,23 +43,22 @@ header {
 
 .info h2 {
   margin: 0;
-  color: #ffffff;
+  color: #fff;
 }
 
 .info p {
   margin: 5px 0;
-  color: #d9e8ff;
+  color: #c7dcf5;
 }
 
 .actions {
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .wiki {
-  background: transparent;
   color: #00aaff;
   text-decoration: none;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 button {
@@ -67,7 +68,7 @@ button {
   padding: 6px 12px;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.2s;
 }
 
 button:hover {
@@ -75,11 +76,11 @@ button:hover {
 }
 
 .projects, .about {
-  padding: 20px;
+  padding: 25px;
 }
 
 .projects h2, .about h2 {
-  color: #ffffff;
+  color: #00aaff;
   border-bottom: 2px solid #00aaff;
   padding-bottom: 5px;
 }
@@ -87,12 +88,11 @@ button:hover {
 footer {
   text-align: center;
   padding: 15px;
-  background: #061622;
+  background: #061c2c;
   color: #aaa;
   font-size: 14px;
 }
 
-/* Responsif untuk HP */
 @media (max-width: 768px) {
   .profile {
     flex-direction: column;
@@ -100,7 +100,7 @@ footer {
   }
 
   .foto-profil {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
   }
 }
