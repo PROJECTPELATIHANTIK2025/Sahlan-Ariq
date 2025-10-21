@@ -1,95 +1,166 @@
 /* === Gaya Umum === */
 body {
-  background: linear-gradient(135deg, #0b0e2e, #1a237e);
-  font-family: 'Poppins', Arial, sans-serif;
-  color: #ffffff;
   margin: 0;
   padding: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #081229;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* === Header === */
+header {
+  text-align: center;
+  background: linear-gradient(135deg, #0a1d3a, #0e2652);
+  padding: 60px 20px;
+  border-bottom: 3px solid #00bcd4;
+}
+
+header h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #00e5ff;
+}
+
+header p {
+  font-size: 1.1em;
+  color: #ddd;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* === Bagian Profil === */
+.profiles {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 20px;
+  background-color: #0d1b3a;
+}
+
+.profile {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 25px;
+  width: 270px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 188, 212, 0.3);
+}
+
+.foto-profil {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #00e5ff;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.profile h2 {
+  color: #00e5ff;
+  font-size: 1.3em;
+  margin-bottom: 8px;
+}
+
+.profile p {
+  color: #ccc;
+  font-size: 0.95em;
+  margin-bottom: 15px;
+}
+
+.actions {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  gap: 10px;
 }
 
-/* === Kartu Profil === */
-.kartu-profil {
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 30px 20px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  width: 90%;
-  max-width: 400px;
-  backdrop-filter: blur(10px);
-}
-
-/* === Foto Profil === */
-.kartu-profil img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #00bcd4;
-  margin-bottom: 20px;
-}
-
-/* === Teks & Tombol === */
-.kartu-profil h1 {
-  font-size: 1.8em;
-  margin: 10px 0;
-  color: #00e5ff;
-}
-
-.kartu-profil p {
-  font-size: 1em;
-  margin-bottom: 15px;
-  color: #e0e0e0;
-}
-
-.kartu-profil a {
-  display: inline-block;
-  color: #00bcd4;
+.actions a {
   text-decoration: none;
-  font-weight: bold;
-  margin-bottom: 15px;
+  color: #00bcd4;
+  font-weight: 600;
 }
 
-.kartu-profil a:hover {
-  color: #00e5ff;
-}
-
-button {
+.actions button {
   background-color: #00bcd4;
   border: none;
-  padding: 10px 20px;
-  border-radius: 25px;
+  padding: 8px 18px;
+  border-radius: 20px;
   color: #fff;
+  font-weight: 600;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.actions button:hover {
+  background-color: #0097a7;
+}
+
+/* === Proyek & Tentang === */
+.projects, .about {
+  text-align: center;
+  background-color: #0a1635;
+  padding: 60px 25px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.projects h2, .about h2 {
+  color: #00e5ff;
+  margin-bottom: 20px;
+  font-size: 1.7em;
+}
+
+.projects h3 {
+  color: #ffffff;
+  margin-top: 25px;
+  margin-bottom: 8px;
+}
+
+.projects p, .about p {
+  color: #ccc;
   font-size: 1em;
-  transition: 0.3s;
+  margin: 0 auto;
+  max-width: 650px;
 }
 
-button:hover {
-  background-color: #008ba3;
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 25px;
+  font-size: 0.9em;
+  background-color: #081229;
+  color: #bbb;
+  border-top: 2px solid #00bcd4;
 }
 
-/* === Responsif untuk HP === */
-@media (max-width: 600px) {
-  .kartu-profil {
-    width: 90%;
-    padding: 25px 15px;
-  }
-
-  .kartu-profil h1 {
+/* === Responsif (HP & Tablet) === */
+@media (max-width: 768px) {
+  header h1 {
     font-size: 1.5em;
   }
 
-  .kartu-profil img {
-    width: 120px;
-    height: 120px;
+  .profiles {
+    flex-direction: column;
+    align-items: center;
   }
 
-  button {
-    width: 100%;
+  .profile {
+    width: 85%;
+  }
+
+  .projects, .about {
+    width: 95%;
+    padding: 40px 20px;
   }
 }
