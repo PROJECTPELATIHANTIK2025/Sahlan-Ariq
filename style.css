@@ -1,78 +1,143 @@
-/* ====== STYLE UNTUK SELURUH HALAMAN ====== */
+/* ===== Global ===== */
 body {
-  background-color: #0a1a2f; /* biru gelap */
+  background-color: #07182e;
+  color: #fff;
   font-family: 'Poppins', sans-serif;
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   margin: 0;
+  padding: 0;
 }
 
-/* ====== KOTAK UTAMA PROFIL ====== */
-.kartu-profil {
-  background: rgba(255, 255, 255, 0.08); /* transparan lembut */
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+header {
   text-align: center;
-  backdrop-filter: blur(10px); /* efek kaca */
-  width: 330px;
+  padding: 40px 20px;
+  background: linear-gradient(180deg, #0a2148, #07182e);
 }
 
-/* ====== SETIAP BAGIAN PROFIL ====== */
+header h1 {
+  font-size: 28px;
+  color: #1e90ff;
+}
+
+header p {
+  color: #dcdcdc;
+  font-size: 16px;
+}
+
+/* ===== Profil ===== */
+.profil-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 40px 20px;
+}
+
 .profil {
-  margin-bottom: 25px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  width: 280px;
+  text-align: center;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
 }
 
-/* ====== FOTO PROFIL (LINGKARAN) ====== */
+.profil:hover {
+  transform: scale(1.05);
+}
+
 .profil img {
   width: 120px;
   height: 120px;
+  border-radius: 50%;
+  border: 3px solid #1e90ff;
   object-fit: cover;
-  border-radius: 50%; /* bikin lingkaran */
-  border: 3px solid #1e90ff; /* garis biru */
   margin-bottom: 10px;
 }
 
-/* ====== TEKS NAMA DAN DESKRIPSI ====== */
-h1 {
-  margin: 5px 0;
-  font-size: 20px;
-  color: #1e90ff; /* biru terang */
+.profil h2 {
+  color: #00bfff;
+  margin-bottom: 5px;
 }
 
-p {
-  font-size: 14px;
+.profil p {
   color: #dcdcdc;
+  font-size: 14px;
+  margin-bottom: 15px;
 }
 
-/* ====== LINK KE WIKIPEDIA ====== */
+/* ===== Tombol & Link ===== */
+button {
+  background-color: #1e90ff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #4682b4;
+}
+
 .link {
-  display: block;
-  margin: 15px 0;
+  display: inline-block;
   color: #00bfff;
   text-decoration: none;
-  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .link:hover {
   text-decoration: underline;
 }
 
-/* ====== TOMBOL SAPA ====== */
-button {
-  background-color: #1e90ff;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
+/* ===== Proyek ===== */
+.proyek {
+  padding: 40px 60px;
+}
+
+.proyek h2 {
+  color: #1e90ff;
+}
+
+.proyek ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.proyek li {
+  margin: 10px 0;
   font-size: 15px;
 }
 
-button:hover {
-  background-color: #4682b4;
+/* ===== Tentang ===== */
+.tentang {
+  padding: 40px 60px;
+  background-color: #0a2148;
+  border-top: 2px solid #1e90ff;
+}
+
+.tentang h2 {
+  color: #1e90ff;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #061324;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* ===== Responsif untuk HP ===== */
+@media (max-width: 600px) {
+  .profil-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .proyek, .tentang {
+    padding: 30px 20px;
+  }
 }
