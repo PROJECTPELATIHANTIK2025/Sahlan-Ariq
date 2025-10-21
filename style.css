@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
-/* Background animasi biru bergerak */
+/* 🌙 Background biru gelap elegan */
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #fff;
-  background: linear-gradient(-45deg, #0072ff, #00c6ff, #005bea, #00d2ff);
+  background: linear-gradient(135deg, #0a0f24, #001f3f, #002a5c);
   background-size: 400% 400%;
-  animation: gradienBergerak 10s ease infinite;
+  animation: gradientMove 15s ease infinite;
 }
 
-@keyframes gradienBergerak {
+@keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
@@ -19,97 +19,131 @@ body {
 /* Header */
 header {
   text-align: center;
-  padding: 40px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(6px);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #00bfff;
+}
+
+header p {
+  font-size: 1.1em;
+  color: #cccccc;
 }
 
 /* Profil */
-.container {
+.profil {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
-  padding: 40px;
+  gap: 40px;
+  padding: 60px 20px;
 }
 
 .kartu-profil {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   border-radius: 20px;
   width: 280px;
-  padding: 25px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 25px;
+  transition: 0.3s;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 .kartu-profil:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .kartu-profil img {
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  border: 3px solid white;
-  margin-bottom: 15px;
+  border: 3px solid #00bfff;
   object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.kartu-profil h2 {
+  color: #00bfff;
+}
+
+.kartu-profil p {
+  color: #ccc;
+  font-size: 0.9em;
+}
+
+.sapaButton {
+  margin-top: 10px;
+  background: #00bfff;
+  color: #001f3f;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sapaButton:hover {
+  background: #fff;
+  color: #002a5c;
 }
 
 /* Tentang Kami */
 .tentang {
   text-align: center;
-  padding: 50px 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .tentang h2 {
-  font-size: 2em;
+  color: #00bfff;
   margin-bottom: 20px;
 }
 
 /* Portofolio */
 .portofolio {
-  padding: 50px 20px;
   text-align: center;
+  padding: 60px 20px;
 }
 
-.karya {
+.karya-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 25px;
+  gap: 30px;
 }
 
-.card {
-  width: 280px;
-  background: rgba(255, 255, 255, 0.15);
+.karya-card {
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  padding: 15px;
-  text-align: center;
+  width: 280px;
+  padding: 20px;
   transition: 0.3s;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+.karya-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.15);
 }
 
-.card img {
+.karya-card img {
   width: 100%;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 /* Kontak */
 .kontak {
   text-align: center;
-  padding: 50px 20px;
-  background: rgba(255,255,255,0.1);
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .kontak ul {
@@ -118,14 +152,19 @@ header {
 }
 
 .kontak a {
-  color: #ffd700;
+  color: #00bfff;
   text-decoration: none;
-  font-weight: bold;
+}
+
+.kontak a:hover {
+  text-decoration: underline;
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 0.9em;
+  color: #aaa;
 }
