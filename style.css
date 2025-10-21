@@ -1,4 +1,4 @@
-/* === STYLE UTAMA === */
+/* === Gaya Utama === */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #041423;
@@ -6,10 +6,14 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* === HEADER === */
+/* === Header === */
 header {
+  width: 100%;
   text-align: center;
   background-color: #0d2a47;
   color: #ffffff;
@@ -22,10 +26,12 @@ header h1 {
   color: #00c8ff;
 }
 
-/* === PROFIL === */
+/* === Profil (Foto + Nama) === */
 .profile {
   text-align: center;
-  margin: 40px auto;
+  margin: 40px auto 20px;
+  width: 90%;
+  max-width: 800px;
 }
 
 .profile img {
@@ -46,21 +52,21 @@ header h1 {
 .profile h2 {
   margin-top: 10px;
   color: #ffffff;
+  font-size: 1.5em;
 }
 
-/* === BAGIAN PROYEK DAN TENTANG === */
+/* === Bagian Proyek & Tentang === */
 section {
   width: 90%;
   max-width: 800px;
-  margin: 30px auto;
   background-color: #0e2c4b;
   padding: 30px 25px;
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   text-align: center;
+  margin-bottom: 30px;
 }
 
-/* Judul bagian */
 section h2 {
   color: #00c8ff;
   border-bottom: 2px solid #00c8ff;
@@ -69,30 +75,47 @@ section h2 {
   margin-bottom: 20px;
 }
 
-/* Judul proyek */
 section h3 {
   color: #ffffff;
   margin-top: 15px;
+  font-size: 1.2em;
 }
 
-/* Paragraf */
 section p {
   color: #d9e8f2;
   font-size: 1em;
   margin: 5px 0 15px;
 }
 
-/* Wikipedia */
+/* === Tombol & Link === */
 a {
   color: #00c8ff;
   text-decoration: none;
+  font-weight: 500;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-/* === FOOTER === */
+button {
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #0088cc;
+  transform: scale(1.05);
+}
+
+/* === Footer === */
 footer {
   text-align: center;
   background-color: #0b243d;
@@ -100,20 +123,43 @@ footer {
   color: #a5c8e2;
   font-size: 0.9em;
   border-top: 2px solid #0077cc;
+  width: 100%;
 }
 
-/* === RESPONSIF (untuk HP) === */
+/* === Responsif untuk HP === */
 @media (max-width: 600px) {
   header h1 {
-    font-size: 1.5em;
-  }
-
-  section {
-    padding: 20px;
+    font-size: 1.4em;
   }
 
   .profile img {
     width: 120px;
     height: 120px;
+  }
+
+  .profile h2 {
+    font-size: 1.2em;
+  }
+
+  section {
+    padding: 20px 15px;
+    width: 95%;
+  }
+
+  section h2 {
+    font-size: 1.2em;
+  }
+
+  section h3 {
+    font-size: 1em;
+  }
+
+  section p {
+    font-size: 0.95em;
+  }
+
+  button {
+    width: 80%;
+    padding: 10px;
   }
 }
