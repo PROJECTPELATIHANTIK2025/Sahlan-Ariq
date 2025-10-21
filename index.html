@@ -3,83 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Sahlan & Ariq</title>
+  <title>Portofolio Sahlan & Ariq</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="hero">
+  <header>
     <h1>Selamat Datang di Website Portofolio Kami!</h1>
-    <p>Website ini menampilkan karya dan profil dari Muhammad Sahlan & Ariq</p>
+    <p>Website ini menampilkan karya dan profil dari <b>Muhammad Sahlan</b> & <b>Ariq</b>.</p>
   </header>
 
-  <main>
-    <!-- Bagian Profil -->
-    <section class="profil">
-      <div class="card">
-        <img src="sahlan.jng" alt="Foto Muhammad Sahlan" />
-        <h2>Muhammad Sahlan</h2>
-        <p>Siswa TKJ | Desainer UI/UX | Pecinta Figma</p>
-        <div class="buttons">
-          <a href="https://www.wikipedia.org" target="_blank" class="btn-link">🌐 Wikipedia</a>
-          <button class="btn-sapa" onclick="sapa('Sahlan')">Sapa Sahlan</button>
-        </div>
-      </div>
+  <section class="profil-container">
+    <div class="profil">
+      <img src="sahlan.jpg" alt="Foto Muhammad Sahlan" />
+      <h2>Muhammad Sahlan</h2>
+      <p>Siswa TKJ | Desainer UI/UX | Pecinta Figma</p>
+      <a href="https://www.wikipedia.org/" target="_blank" class="link">Wikipedia</a>
+      <button onclick="alert('Halo! Terima kasih telah berkunjung ke profil Sahlan 😄')">Sapa Sahlan</button>
+    </div>
 
-      <div class="card">
-        <img src="ariq.jng" alt="Foto Ariq"/>
-        <h2>Ariq</h2>
-        <p>Siswa TKJ | Web Developer | Hobi Coding dan Teknologi</p>
-        <div class="buttons">
-          <a href="https://www.wikipedia.org" target="_blank" class="btn-link">🌐 Wikipedia</a>
-          <button class="btn-sapa" onclick="sapa('Ariq')">Sapa Ariq</button>
-        </div>
-      </div>
-    </section>
+    <div class="profil">
+      <img src="ariq.jpg" alt="Foto Ariq" />
+      <h2>Ariq</h2>
+      <p>Siswa TKJ | Web Developer | Hobi Coding dan Teknologi</p>
+      <a href="https://www.wikipedia.org/" target="_blank" class="link">Wikipedia</a>
+      <button onclick="alert('Hai! Terima kasih sudah melihat profil Ariq 🚀')">Sapa Ariq</button>
+    </div>
+  </section>
 
-    <!-- Bagian Portofolio -->
-    <section class="portofolio">
-      <h2>💼 Proyek & Karya Kami</h2>
-      <div class="project-grid">
-        <div class="project-card">
-          <h3>Desain Website Sekolah</h3>
-          <p>Membuat prototipe tampilan web sekolah menggunakan Figma.</p>
-        </div>
-        <div class="project-card">
-          <h3>Jaringan LAN</h3>
-          <p>Praktik instalasi dan konfigurasi jaringan LAN di lab sekolah.</p>
-        </div>
-        <div class="project-card">
-          <h3>Website Profil Pribadi</h3>
-          <p>Membangun website sederhana menggunakan HTML, CSS, dan JS.</p>
-        </div>
-      </div>
-    </section>
+  <section class="proyek">
+    <h2>💼 Proyek & Karya Kami</h2>
+    <ul>
+      <li><b>Desain Website Sekolah</b> — Membuat prototipe tampilan web sekolah menggunakan Figma.</li>
+      <li><b>Jaringan LAN</b> — Praktik instalasi dan konfigurasi jaringan di lab sekolah.</li>
+      <li><b>Website Profil Pribadi</b> — Membangun website sederhana menggunakan HTML, CSS, dan JS.</li>
+    </ul>
+  </section>
 
-    <!-- Bagian Tentang -->
-    <section class="tentang">
-      <h2>Tentang Kami</h2>
-      <p>
-        Kami adalah siswa SMKN 1 Tanjunganom jurusan Teknik Komputer dan Jaringan.
-        Kami percaya bahwa semangat belajar dan kreativitas dapat menciptakan karya yang luar biasa.
-      </p>
-    </section>
-
-    <!-- Bagian Kontak -->
-    <section class="kontak">
-      <h2>📬 Hubungi Kami</h2>
-      <p>Temukan kami di media sosial:</p>
-      <a href="https://www.instagram.com" target="_blank" class="btn-ig">Instagram</a>
-    </section>
-  </main>
+  <section class="tentang">
+    <h2>Tentang Kami</h2>
+    <p>
+      Kami adalah siswa <b>SMKN 1 Tanjunganom</b> jurusan <b>Teknik Komputer dan Jaringan</b>.
+      Kami percaya bahwa kolaborasi dan semangat belajar dapat menciptakan karya luar biasa.
+    </p>
+  </section>
 
   <footer>
-    <p>© 2025 Muhammad Sahlan & Ariq | SMKN 1 Tanjunganom</p>
+    © 2025 Muhammad Sahlan & Ariq | SMKN 1 Tanjunganom
   </footer>
-
-    <script>
-    function sapa(nama) {
-      alert(`Halo! Kamu sedang menyapa ${nama}. Terima kasih sudah mampir 😄`);
-    }
-  </script>
 </body>
 </html>
