@@ -1,143 +1,106 @@
-/* ===== Global ===== */
+/* Warna dan layout utama */
 body {
-  background-color: #07182e;
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #0a1f33;
+  color: white;
 }
 
 header {
+  background: #07182c;
+  padding: 20px;
   text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(180deg, #0a2148, #07182e);
+  color: #00aaff;
 }
 
-header h1 {
-  font-size: 28px;
-  color: #1e90ff;
-}
-
-header p {
-  color: #dcdcdc;
-  font-size: 16px;
-}
-
-/* ===== Profil ===== */
-.profil-container {
+.profiles {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   gap: 25px;
-  padding: 40px 20px;
+  padding: 20px;
 }
 
-.profil {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  width: 280px;
-  text-align: center;
-  padding: 25px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s;
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #0e2a47;
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
-.profil:hover {
-  transform: scale(1.05);
-}
-
-.profil img {
-  width: 120px;
-  height: 120px;
+.foto-profil {
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
-  border: 3px solid #1e90ff;
+  border: 3px solid #00aaff;
   object-fit: cover;
-  margin-bottom: 10px;
 }
 
-.profil h2 {
-  color: #00bfff;
-  margin-bottom: 5px;
+.info h2 {
+  margin: 0;
+  color: #ffffff;
 }
 
-.profil p {
-  color: #dcdcdc;
-  font-size: 14px;
-  margin-bottom: 15px;
+.info p {
+  margin: 5px 0;
+  color: #d9e8ff;
 }
 
-/* ===== Tombol & Link ===== */
+.actions {
+  margin-top: 8px;
+}
+
+.wiki {
+  background: transparent;
+  color: #00aaff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
 button {
-  background-color: #1e90ff;
-  border: none;
+  background: #007bff;
   color: white;
-  padding: 10px 20px;
+  border: none;
+  padding: 6px 12px;
   border-radius: 8px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background 0.2s ease;
 }
 
 button:hover {
-  background-color: #4682b4;
+  background: #0099ff;
 }
 
-.link {
-  display: inline-block;
-  color: #00bfff;
-  text-decoration: none;
-  margin-bottom: 10px;
+.projects, .about {
+  padding: 20px;
 }
 
-.link:hover {
-  text-decoration: underline;
+.projects h2, .about h2 {
+  color: #ffffff;
+  border-bottom: 2px solid #00aaff;
+  padding-bottom: 5px;
 }
 
-/* ===== Proyek ===== */
-.proyek {
-  padding: 40px 60px;
-}
-
-.proyek h2 {
-  color: #1e90ff;
-}
-
-.proyek ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.proyek li {
-  margin: 10px 0;
-  font-size: 15px;
-}
-
-/* ===== Tentang ===== */
-.tentang {
-  padding: 40px 60px;
-  background-color: #0a2148;
-  border-top: 2px solid #1e90ff;
-}
-
-.tentang h2 {
-  color: #1e90ff;
-}
-
-/* ===== Footer ===== */
 footer {
   text-align: center;
   padding: 15px;
-  background-color: #061324;
-  font-size: 14px;
+  background: #061622;
   color: #aaa;
+  font-size: 14px;
 }
 
-/* ===== Responsif untuk HP ===== */
-@media (max-width: 600px) {
-  .profil-container {
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+  .profile {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
   }
-  .proyek, .tentang {
-    padding: 30px 20px;
+
+  .foto-profil {
+    width: 100px;
+    height: 100px;
   }
 }
