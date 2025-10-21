@@ -1,135 +1,119 @@
+/* === STYLE UTAMA === */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-color: #041423;
+  color: #e4e9f2;
   margin: 0;
   padding: 0;
-  background-color: #081b2f;
-  color: white;
-}
-
-header {
-  background: #0a2744;
-  padding: 25px;
-  text-align: center;
-  color: #00aaff;
-}
-
-/* Bagian Profil */
-.profiles {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  padding: 30px 10px;
-}
-
-.profile {
-  background: #0f2f50;
-  border-radius: 20px;
-  padding: 20px;
-  width: 90%;
-  max-width: 700px;
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-}
-
-.foto-profil {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  border: 3px solid #00aaff;
-  object-fit: cover;
-}
-
-.info h2 {
-  margin: 0;
-  color: #fff;
-}
-
-.info p {
-  margin: 5px 0;
-  color: #c7dcf5;
-}
-
-.actions {
-  margin-top: 10px;
-}
-
-.wiki {
-  color: #00aaff;
-  text-decoration: none;
-  margin-right: 15px;
-}
-
-button {
-  background: #007bff;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-button:hover {
-  background: #0099ff;
-}
-
-/* === Bagian Proyek & Tentang Kami === */
-.projects, .about {
-  background: #0f2f50;
-  border-radius: 20px;
-  padding: 30px;
-  width: 90%;
-  max-width: 800px;
-  margin: 30px auto;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-  text-align: center;
-}
-
-.projects h2, .about h2 {
-  color: #00aaff;
-  border-bottom: 2px solid #00aaff;
-  padding-bottom: 5px;
-  display: inline-block;
-  margin-bottom: 15px;
-}
-
-.projects h3 {
-  color: #fff;
-  margin-top: 20px;
-  margin-bottom: 5px;
-}
-
-.projects p, .about p {
-  color: #c7dcf5;
-  font-size: 15px;
   line-height: 1.6;
 }
 
-footer {
+/* === HEADER === */
+header {
   text-align: center;
-  padding: 15px;
-  background: #061c2c;
-  color: #aaa;
-  font-size: 14px;
-  margin-top: 40px;
+  background-color: #0d2a47;
+  color: #ffffff;
+  padding: 25px 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
 }
 
-/* Responsif untuk HP */
-@media (max-width: 768px) {
-  .profile {
-    flex-direction: column;
-    text-align: center;
+header h1 {
+  font-size: 1.8em;
+  color: #00c8ff;
+}
+
+/* === PROFIL === */
+.profile {
+  text-align: center;
+  margin: 40px auto;
+}
+
+.profile img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid #00aaff;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 170, 255, 0.7);
+}
+
+.profile h2 {
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+/* === BAGIAN PROYEK DAN TENTANG === */
+section {
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #0e2c4b;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+/* Judul bagian */
+section h2 {
+  color: #00c8ff;
+  border-bottom: 2px solid #00c8ff;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+/* Judul proyek */
+section h3 {
+  color: #ffffff;
+  margin-top: 15px;
+}
+
+/* Paragraf */
+section p {
+  color: #d9e8f2;
+  font-size: 1em;
+  margin: 5px 0 15px;
+}
+
+/* Wikipedia */
+a {
+  color: #00c8ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  background-color: #0b243d;
+  padding: 20px;
+  color: #a5c8e2;
+  font-size: 0.9em;
+  border-top: 2px solid #0077cc;
+}
+
+/* === RESPONSIF (untuk HP) === */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5em;
   }
 
-  .foto-profil {
-    width: 130px;
-    height: 130px;
+  section {
+    padding: 20px;
   }
 
-  .projects, .about {
-    width: 95%;
+  .profile img {
+    width: 120px;
+    height: 120px;
   }
 }
