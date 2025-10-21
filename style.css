@@ -1,10 +1,11 @@
+/* Animasi background biru gelap */
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #fff;
   background: linear-gradient(270deg, #001f3f, #002b5b, #001f3f);
   background-size: 600% 600%;
-  animation: bgMove 10s ease infinite;
+  animation: bgMove 15s ease infinite;
 }
 
 @keyframes bgMove {
@@ -13,90 +14,124 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-.container {
+/* Bagian atas (hero) */
+.hero {
   text-align: center;
-  padding: 30px;
+  padding: 70px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
-h1 {
-  margin-bottom: 20px;
-}
-
-.kartu-container {
+/* Profil Section */
+.profil {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 20px;
 }
 
-.kartu-profil, .kartu-proyek {
+.card {
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  padding: 20px;
-  width: 260px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  width: 270px;
   transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-.kartu-profil:hover, .kartu-proyek:hover {
-  transform: scale(1.05);
-  background: rgba(255,255,255,0.2);
+.card:hover {
+  transform: translateY(-10px);
+  background: rgba(255,255,255,0.15);
 }
 
-.kartu-profil img {
+.profil-img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  margin-bottom: 15px;
   border: 3px solid #00bfff;
+  margin-bottom: 15px;
 }
 
-.btn-sapa {
-  background: #00bfff;
-  border: none;
+.buttons {
+  margin-top: 15px;
+}
+
+.btn-link, .btn-sapa {
+  display: inline-block;
+  margin: 5px;
   padding: 10px 15px;
   border-radius: 10px;
-  color: white;
+  border: none;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.btn-sapa:hover {
-  background: #0099cc;
-}
-
 .btn-link {
-  display: block;
-  margin: 10px auto;
   background: #005f99;
   color: white;
-  padding: 8px 15px;
-  border-radius: 8px;
   text-decoration: none;
-  transition: 0.3s;
 }
 
-.btn-link:hover {
-  background: #007acc;
+.btn-sapa {
+  background: #00bfff;
+  color: white;
 }
 
-.kontak .btn-ig {
-  display: inline-block;
+.btn-link:hover { background: #007acc; }
+.btn-sapa:hover { background: #0099cc; }
+
+/* Portofolio */
+.portofolio {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.project-card {
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Tentang */
+.tentang {
+  text-align: center;
+  padding: 50px 20px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Kontak */
+.kontak {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.btn-ig {
   background: #ff007f;
   color: white;
-  padding: 10px 20px;
-  border-radius: 20px;
+  padding: 12px 25px;
+  border-radius: 25px;
   text-decoration: none;
   transition: 0.3s;
 }
 
-.kontak .btn-ig:hover {
+.btn-ig:hover {
   background: #e60073;
 }
 
-@media (max-width: 600px) {
-  .kartu-container {
-    flex-direction: column;
-    align-items: center;
-  }
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.05);
+  font-size: 14px;
 }
