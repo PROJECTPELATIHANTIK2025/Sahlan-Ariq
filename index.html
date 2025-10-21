@@ -7,60 +7,75 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav>
-    <h2>Portfolio <span>Sahlan & Ariq</span></h2>
-  </nav>
-
-  <header>
+  <header class="hero">
     <h1>Selamat Datang di Website Portofolio Kami!</h1>
-    <p>Website ini menampilkan karya dan profil dari <b>Muhammad Sahlan</b> & <b>Ariq</b>.</p>
+    <p>Website ini menampilkan karya dan profil dari Muhammad Sahlan & Ariq</p>
   </header>
 
-  <main class="container">
+  <main>
     <!-- Bagian Profil -->
-    <section class="profiles">
+    <section class="profil">
       <div class="card">
-        <img src="sahlan.jpg" alt="Foto Sahlan" class="foto">
-        <h3>Muhammad Sahlan</h3>
-        <p>Siswa TKJ | UI/UX Designer</p>
-        <p>Hobi: Desain & Figma</p>
-        <a href="#" class="btn">Sapa Sahlan</a>
+        <img src="sahlan.png" alt="Foto Muhammad Sahlan" class="profil-img" />
+        <h2>Muhammad Sahlan</h2>
+        <p>Siswa TKJ | Desainer UI/UX | Pecinta Figma</p>
+        <div class="buttons">
+          <a href="https://www.wikipedia.org" target="_blank" class="btn-link">🌐 Wikipedia</a>
+          <button class="btn-sapa" onclick="sapa('Sahlan')">Sapa Sahlan</button>
+        </div>
       </div>
 
       <div class="card">
-        <img src="ariq.jpg" alt="Foto Ariq" class="foto">
-        <h3>Ariq</h3>
-        <p>Siswa TKJ | Web Developer</p>
-        <p>Hobi: Coding dan Teknologi</p>
-        <a href="#" class="btn">Sapa Ariq</a>
+        <img src="ariq.png" alt="Foto Ariq" class="profil-img" />
+        <h2>Ariq</h2>
+        <p>Siswa TKJ | Web Developer | Hobi Coding dan Teknologi</p>
+        <div class="buttons">
+          <a href="https://www.wikipedia.org" target="_blank" class="btn-link">🌐 Wikipedia</a>
+          <button class="btn-sapa" onclick="sapa('Ariq')">Sapa Ariq</button>
+        </div>
       </div>
     </section>
 
-    <!-- Bagian Proyek -->
-    <section class="projects">
+    <!-- Bagian Portofolio -->
+    <section class="portofolio">
       <h2>💼 Proyek & Karya Kami</h2>
-      <div class="project-card">
-        <h4>Desain Website Sekolah</h4>
-        <p>Membuat prototype tampilan web sekolah menggunakan Figma.</p>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Desain Website Sekolah</h3>
+          <p>Membuat prototipe tampilan web sekolah menggunakan Figma.</p>
+        </div>
+        <div class="project-card">
+          <h3>Jaringan LAN</h3>
+          <p>Praktik instalasi dan konfigurasi jaringan LAN di lab sekolah.</p>
+        </div>
+        <div class="project-card">
+          <h3>Website Profil Pribadi</h3>
+          <p>Membangun website sederhana menggunakan HTML, CSS, dan JS.</p>
+        </div>
       </div>
-      <div class="project-card">
-        <h4>Jaringan LAN</h4>
-        <p>Praktik instalasi dan konfigurasi jaringan LAN di lab sekolah.</p>
-      </div>
-      <div class="project-card">
-        <h4>Website Profil Pribadi</h4>
-        <p>Membangun website sederhana menggunakan HTML, CSS, dan JS.</p>
-      </div>
+    </section>
 
+    <!-- Bagian Tentang -->
+    <section class="tentang">
       <h2>Tentang Kami</h2>
-      <p class="about">
-        Kami adalah siswa <b>SMKN 1 Tanjunganom</b> jurusan Teknik Komputer dan Jaringan. Kami percaya bahwa semangat belajar dan kreativitas dapat menciptakan karya yang luar biasa.
+      <p>
+        Kami adalah siswa SMKN 1 Tanjunganom jurusan Teknik Komputer dan Jaringan.
+        Kami percaya bahwa semangat belajar dan kreativitas dapat menciptakan karya yang luar biasa.
       </p>
+    </section>
+
+    <!-- Bagian Kontak -->
+    <section class="kontak">
+      <h2>📬 Hubungi Kami</h2>
+      <p>Temukan kami di media sosial:</p>
+      <a href="https://www.instagram.com" target="_blank" class="btn-ig">Instagram</a>
     </section>
   </main>
 
   <footer>
     <p>© 2025 Muhammad Sahlan & Ariq | SMKN 1 Tanjunganom</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
