@@ -1,34 +1,54 @@
-/* Background biru gelap dengan efek bergerak */
+/* Background biru gelap dengan efek animasi bergerak + bintang */
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   color: white;
-  background: linear-gradient(135deg, #001f3f, #003366, #004080);
-  background-size: 400% 400%;
-  animation: moveBg 10s ease infinite;
+  background: radial-gradient(circle at 20% 20%, #002244, #000d1a);
+  overflow-x: hidden;
+  position: relative;
 }
 
-@keyframes moveBg {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* Efek bintang (partikel kecil yang bergerak pelan) */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+  animation: starsMove 30s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes starsMove {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-200px, -200px); }
 }
 
 .container {
   text-align: center;
-  padding: 40px 20px;
+  padding: 60px 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .judul {
-  font-size: 24px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 0 15px #00bfff;
   margin-bottom: 40px;
 }
 
+/* Wrapper kartu jadi sejajar (dua kolom) */
 .profil-wrapper {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   gap: 40px;
+  margin-bottom: 60px;
 }
 
 .kartu-profil {
@@ -36,62 +56,72 @@ body {
   backdrop-filter: blur(10px);
   border-radius: 20px;
   width: 280px;
-  padding: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
 }
 
 .kartu-profil:hover {
   transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
 .kartu-profil img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  border: 3px solid #fff;
+  border: 3px solid #00bfff;
   object-fit: cover;
   margin-bottom: 15px;
 }
 
 .kartu-profil h2 {
-  color: #fff;
+  color: #00bfff;
+  margin-bottom: 10px;
 }
 
 .kartu-profil p {
   font-size: 14px;
+  color: #d6e8ff;
   margin-bottom: 15px;
 }
 
 .kartu-profil a {
-  display: inline-block;
+  display: block;
   color: #ffd700;
   font-weight: bold;
   text-decoration: none;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .kartu-profil button {
   background: #ffd700;
   border: none;
   color: #000;
-  padding: 8px 15px;
-  border-radius: 10px;
+  padding: 10px 18px;
+  border-radius: 12px;
   cursor: pointer;
   font-weight: bold;
+  transition: background 0.3s;
 }
 
 .kartu-profil button:hover {
   background: #ffcc00;
 }
 
+/* Tentang dan Proyek */
 .tentang,
 .proyek {
-  margin-top: 60px;
   text-align: center;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 850px;
+  margin: 0 auto 60px auto;
+  color: #d6e8ff;
+}
+
+.tentang h2,
+.proyek h2 {
+  color: #00bfff;
+  margin-bottom: 20px;
 }
 
 .proyek-item {
