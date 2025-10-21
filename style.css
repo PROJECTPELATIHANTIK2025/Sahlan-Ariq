@@ -1,137 +1,78 @@
-/* Animasi background biru gelap */
+/* ====== STYLE UNTUK SELURUH HALAMAN ====== */
 body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  color: #fff;
-  background: linear-gradient(270deg, #001f3f, #002b5b, #001f3f);
-  background-size: 600% 600%;
-  animation: bgMove 15s ease infinite;
-}
-
-@keyframes bgMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Bagian atas (hero) */
-.hero {
-  text-align: center;
-  padding: 70px 20px;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-}
-
-/* Profil Section */
-.profil {
+  background-color: #0a1a2f; /* biru gelap */
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  padding: 60px 20px;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-.card {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
+/* ====== KOTAK UTAMA PROFIL ====== */
+.kartu-profil {
+  background: rgba(255, 255, 255, 0.08); /* transparan lembut */
   padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   text-align: center;
-  width: 270px;
-  transition: 0.3s;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px); /* efek kaca */
+  width: 330px;
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  background: rgba(255,255,255,0.15);
+/* ====== SETIAP BAGIAN PROFIL ====== */
+.profil {
+  margin-bottom: 25px;
 }
 
-.profil-img {
+/* ====== FOTO PROFIL (LINGKARAN) ====== */
+.profil img {
   width: 120px;
   height: 120px;
-  border-radius: 50%;
-  border: 3px solid #00bfff;
-  margin-bottom: 15px;
+  object-fit: cover;
+  border-radius: 50%; /* bikin lingkaran */
+  border: 3px solid #1e90ff; /* garis biru */
+  margin-bottom: 10px;
 }
 
-.buttons {
-  margin-top: 15px;
+/* ====== TEKS NAMA DAN DESKRIPSI ====== */
+h1 {
+  margin: 5px 0;
+  font-size: 20px;
+  color: #1e90ff; /* biru terang */
 }
 
-.btn-link, .btn-sapa {
-  display: inline-block;
-  margin: 5px;
-  padding: 10px 15px;
-  border-radius: 10px;
+p {
+  font-size: 14px;
+  color: #dcdcdc;
+}
+
+/* ====== LINK KE WIKIPEDIA ====== */
+.link {
+  display: block;
+  margin: 15px 0;
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* ====== TOMBOL SAPA ====== */
+button {
+  background-color: #1e90ff;
   border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
+  font-size: 15px;
 }
 
-.btn-link {
-  background: #005f99;
-  color: white;
-  text-decoration: none;
-}
-
-.btn-sapa {
-  background: #00bfff;
-  color: white;
-}
-
-.btn-link:hover { background: #007acc; }
-.btn-sapa:hover { background: #0099cc; }
-
-/* Portofolio */
-.portofolio {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.project-card {
-  background: rgba(255,255,255,0.1);
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-/* Tentang */
-.tentang {
-  text-align: center;
-  padding: 50px 20px;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-/* Kontak */
-.kontak {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.btn-ig {
-  background: #ff007f;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 25px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn-ig:hover {
-  background: #e60073;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: rgba(255,255,255,0.05);
-  font-size: 14px;
+button:hover {
+  background-color: #4682b4;
 }
