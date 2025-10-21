@@ -33,7 +33,7 @@ h1 {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   padding: 20px;
-  width: 250px;
+  width: 260px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
   transition: 0.3s;
 }
@@ -63,6 +63,21 @@ h1 {
 
 .btn-sapa:hover {
   background: #0099cc;
+}
+
+.btn-link {
+  display: block;
+  margin: 10px auto;
+  background: #005f99;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-link:hover {
+  background: #007acc;
 }
 
 .kontak .btn-ig {
