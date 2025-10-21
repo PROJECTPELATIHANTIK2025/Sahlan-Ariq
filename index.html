@@ -1,44 +1,57 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Sahlan & Ariq</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <nav>
+    <h2>Portfolio <span>Sahlan & Ariq</span></h2>
+  </nav>
+
   <header>
     <h1>Selamat Datang di Website Portofolio Kami!</h1>
     <p>Website ini menampilkan karya dan profil dari <b>Muhammad Sahlan</b> & <b>Ariq</b>.</p>
   </header>
 
-  <main class="container">
+  <main class="content">
     <section class="profile">
       <div class="card">
         <img src="sahlan.jpg" alt="Foto Sahlan" class="foto">
-        <h2>Muhammad Sahlan</h2>
-        <p>Siswa TKJ | UI/UX Designer <br> Hobi: Desain & Figma</p>
+        <h3>Muhammad Sahlan</h3>
+        <p>Siswa TKJ | UI/UX Designer</p>
+        <p>Hobi: Desain & Figma</p>
         <a href="#" class="btn">Sapa Sahlan</a>
       </div>
 
       <div class="card">
         <img src="ariq.jpg" alt="Foto Ariq" class="foto">
-        <h2>Ariq</h2>
-        <p>Siswa TKJ | Web Developer <br> Hobi: Coding dan Teknologi</p>
+        <h3>Ariq</h3>
+        <p>Siswa TKJ | Web Developer</p>
+        <p>Hobi: Coding dan Teknologi</p>
         <a href="#" class="btn">Sapa Ariq</a>
       </div>
     </section>
 
-    <section class="project">
+    <section class="projects">
       <h2>💼 Proyek & Karya Kami</h2>
-      <ul>
-        <li><b>Desain Website Sekolah:</b> Membuat prototype tampilan web sekolah menggunakan Figma.</li>
-        <li><b>Jaringan LAN:</b> Praktik instalasi dan konfigurasi jaringan LAN di lab sekolah.</li>
-        <li><b>Website Profil Pribadi:</b> Membangun website sederhana menggunakan HTML, CSS, dan JS.</li>
-      </ul>
+      <div class="project-card">
+        <h4>Desain Website Sekolah</h4>
+        <p>Membuat prototype tampilan web sekolah menggunakan Figma.</p>
+      </div>
+      <div class="project-card">
+        <h4>Jaringan LAN</h4>
+        <p>Praktik instalasi dan konfigurasi jaringan LAN di lab sekolah.</p>
+      </div>
+      <div class="project-card">
+        <h4>Website Profil Pribadi</h4>
+        <p>Membangun website sederhana menggunakan HTML, CSS, dan JS.</p>
+      </div>
 
       <h2>Tentang Kami</h2>
-      <p>Kami adalah siswa <b>SMKN 1 Tanjunganom</b> jurusan Teknik Komputer dan Jaringan. Kami percaya bahwa semangat belajar dan kreativitas dapat menciptakan karya yang luar biasa.</p>
+      <p class="about">Kami adalah siswa <b>SMKN 1 Tanjunganom</b> jurusan Teknik Komputer dan Jaringan. Kami percaya bahwa semangat belajar dan kreativitas dapat menciptakan karya yang luar biasa.</p>
     </section>
   </main>
 
@@ -47,4 +60,3 @@
   </footer>
 </body>
 </html>
-
