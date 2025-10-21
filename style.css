@@ -1,21 +1,31 @@
-/* Background dan font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Background animasi biru bergerak */
 body {
   margin: 0;
-  font-family: 'Poppins', Arial, sans-serif;
-  background: linear-gradient(to right, #00c6ff, #0072ff);
+  font-family: 'Poppins', sans-serif;
   color: #fff;
+  background: linear-gradient(-45deg, #0072ff, #00c6ff, #005bea, #00d2ff);
+  background-size: 400% 400%;
+  animation: gradienBergerak 10s ease infinite;
+}
+
+@keyframes gradienBergerak {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Header */
 header {
   text-align: center;
-  padding: 30px;
+  padding: 40px;
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(6px);
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Kontainer kartu */
+/* Profil */
 .container {
   display: flex;
   justify-content: center;
@@ -24,7 +34,6 @@ header {
   padding: 40px;
 }
 
-/* Kartu profil */
 .kartu-profil {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(8px);
@@ -41,7 +50,6 @@ header {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Foto profil */
 .kartu-profil img {
   width: 130px;
   height: 130px;
@@ -51,47 +59,204 @@ header {
   object-fit: cover;
 }
 
-/* Teks di dalam kartu */
-.kartu-profil h2 {
-  margin: 10px 0 5px;
-  font-size: 1.4em;
-  color: #fff;
+/* Tentang Kami */
+.tentang {
+  text-align: center;
+  padding: 50px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-.kartu-profil p {
-  font-size: 0.9em;
-  color: #e0e0e0;
+.tentang h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
 }
 
-/* Tombol dan link */
-.kartu-profil a {
-  display: block;
-  margin: 10px 0;
+/* Portofolio */
+.portofolio {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.karya {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card {
+  width: 280px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Kontak */
+.kontak {
+  text-align: center;
+  padding: 50px 20px;
+  background: rgba(255,255,255,0.1);
+}
+
+.kontak ul {
+  list-style: none;
+  padding: 0;
+}
+
+.kontak a {
   color: #ffd700;
   text-decoration: none;
   font-weight: bold;
 }
 
-.sapaButton {
-  background: #ffd700;
-  color: #333;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: bold;
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.1);
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Background animasi biru bergerak */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: linear-gradient(-45deg, #0072ff, #00c6ff, #005bea, #00d2ff);
+  background-size: 400% 400%;
+  animation: gradienBergerak 10s ease infinite;
+}
+
+@keyframes gradienBergerak {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Profil */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px;
+}
+
+.kartu-profil {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  width: 280px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.kartu-profil:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.kartu-profil img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+/* Tentang Kami */
+.tentang {
+  text-align: center;
+  padding: 50px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.tentang h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Portofolio */
+.portofolio {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.karya {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card {
+  width: 280px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
   transition: 0.3s;
 }
 
-.sapaButton:hover {
-  background: #fff;
-  color: #0072ff;
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Kontak */
+.kontak {
+  text-align: center;
+  padding: 50px 20px;
+  background: rgba(255,255,255,0.1);
+}
+
+.kontak ul {
+  list-style: none;
+  padding: 0;
+}
+
+.kontak a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 15px;
-  font-size: 0.9em;
-  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  background: rgba(255,255,255,0.1);
 }
