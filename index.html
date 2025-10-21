@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profil Sahlan & Ariq</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Sahlan & Ariq</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
+  <header class="hero">
+    <h1>Selamat Datang di Website Portofolio Kami!</h1>
+    <p>Website ini menampilkan karya dan profil dari Muhammad Sahlan & Ariq</p>
+  </header>
 
+  <main>
     <!-- Bagian Profil -->
     <section class="profil">
-      <h1>🌟 Selamat Datang di Profil Kami</h1>
-      <div class="kartu-container">
-        <div class="kartu-profil">
-          <img src="sahlan.png" alt="Foto Sahlan">
-          <h2>Muhammad Sahlan</h2>
-          <p>Siswa SMKN 1 Tanjunganom jurusan TKJ. Minat di UI/UX, desain, dan cabling.</p>
-          <a href="https://www.wikipedia.org/" target="_blank" class="btn-link">🌐 Wikipedia Saya</a>
+      <div class="card">
+        <img src="sahlan.png" alt="Foto Muhammad Sahlan" class="profil-img" />
+        <h2>Muhammad Sahlan</h2>
+        <p>Siswa TKJ | Desainer UI/UX | Pecinta Figma</p>
+        <div class="buttons">
+          <a href="https://www.wikipedia.org" target="_blank" class="btn-link">🌐 Wikipedia</a>
           <button class="btn-sapa" onclick="sapa('Sahlan')">Sapa Sahlan</button>
         </div>
+      </div>
 
-        <div class="kartu-profil">
-          <img src="ariq.png" alt="Foto Ariq">
-          <h2>Ariq</h2>
-          <p>Siswa kreatif dan pekerja keras. Tertarik pada jaringan dan dunia teknologi.</p>
-          <a href="https://www.wikipedia.org/" target="_blank" class="btn-link">🌐 Wikipedia Saya</a>
+      <div class="card">
+        <img src="ariq.png" alt="Foto Ariq" class="profil-img" />
+        <h2>Ariq</h2>
+        <p>Siswa TKJ | Web Developer | Hobi Coding dan Teknologi</p>
+        <div class="buttons">
+          <a href="https://www.wikipedia.org" target="_blank" class="btn-link">🌐 Wikipedia</a>
           <button class="btn-sapa" onclick="sapa('Ariq')">Sapa Ariq</button>
         </div>
       </div>
@@ -33,31 +38,43 @@
 
     <!-- Bagian Portofolio -->
     <section class="portofolio">
-      <h1>💼 Portofolio Kami</h1>
-      <div class="kartu-container">
-        <div class="kartu-proyek">
-          <h3>Desain UI Website</h3>
-          <p>Proyek Figma untuk membuat tampilan web sekolah yang modern dan responsif.</p>
+      <h2>💼 Proyek & Karya Kami</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Desain Website Sekolah</h3>
+          <p>Membuat prototipe tampilan web sekolah menggunakan Figma.</p>
         </div>
-        <div class="kartu-proyek">
-          <h3>Instalasi Jaringan LAN</h3>
-          <p>Membangun jaringan LAN di lab sekolah menggunakan topologi star.</p>
+        <div class="project-card">
+          <h3>Jaringan LAN</h3>
+          <p>Praktik instalasi dan konfigurasi jaringan LAN di lab sekolah.</p>
         </div>
-        <div class="kartu-proyek">
-          <h3>Website Profil</h3>
-          <p>Membuat website profil pribadi dengan HTML, CSS, dan JavaScript dasar.</p>
+        <div class="project-card">
+          <h3>Website Profil Pribadi</h3>
+          <p>Membangun website sederhana menggunakan HTML, CSS, dan JS.</p>
         </div>
       </div>
     </section>
 
-    <!-- Bagian Kontak -->
-    <section class="kontak">
-      <h1>📬 Hubungi Kami</h1>
-      <p>Ingin kenal lebih dekat? Kunjungi sosial media kami atau kirim pesan!</p>
-      <a href="https://www.instagram.com/" target="_blank" class="btn-ig">Instagram</a>
+    <!-- Bagian Tentang -->
+    <section class="tentang">
+      <h2>Tentang Kami</h2>
+      <p>
+        Kami adalah siswa SMKN 1 Tanjunganom jurusan Teknik Komputer dan Jaringan.
+        Kami percaya bahwa semangat belajar dan kreativitas dapat menciptakan karya yang luar biasa.
+      </p>
     </section>
 
-  </div>
+    <!-- Bagian Kontak -->
+    <section class="kontak">
+      <h2>📬 Hubungi Kami</h2>
+      <p>Temukan kami di media sosial:</p>
+      <a href="https://www.instagram.com" target="_blank" class="btn-ig">Instagram</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Muhammad Sahlan & Ariq | SMKN 1 Tanjunganom</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
