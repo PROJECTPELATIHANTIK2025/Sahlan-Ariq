@@ -1,33 +1,96 @@
+/* Background dan font */
 body {
-  background-color: #FFFFE0;
-  font-family: Tahoma, Arial;
-  color: #191970;
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: #fff;
 }
 
-.kartu-profil {
-  margin: 50px auto;
-  width: 300px;
-  max-width: 50px auto;
-  padding: 20px;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-.kartu-profil {
-  margin: 50px auto;
-  width: 300px;
-  max-width: 50px auto;
-  padding: 20px;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+/* Header */
+header {
+  text-align: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-.kartu-profil img{
-  width: 150px;
-  border-radius: 15px;
+/* Kontainer kartu */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px;
 }
-.kartu-profil img{
-  width: 150px;
-  border-radius: 15px;
+
+/* Kartu profil */
+.kartu-profil {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  width: 280px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.kartu-profil:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Foto profil */
+.kartu-profil img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-bottom: 15px;
+}
+
+/* Teks di dalam kartu */
+.kartu-profil h2 {
+  margin: 10px 0 5px;
+  font-size: 1.4em;
+  color: #fff;
+}
+
+.kartu-profil p {
+  font-size: 0.9em;
+  color: #e0e0e0;
+}
+
+/* Tombol dan link */
+.kartu-profil a {
+  display: block;
+  margin: 10px 0;
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sapaButton {
+  background: #ffd700;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.sapaButton:hover {
+  background: #fff;
+  color: #0072ff;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+  background: rgba(255, 255, 255, 0.1);
 }
