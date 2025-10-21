@@ -13,6 +13,7 @@ header {
   color: #00aaff;
 }
 
+/* Bagian Profil */
 .profiles {
   display: flex;
   flex-direction: column;
@@ -75,14 +76,36 @@ button:hover {
   background: #0099ff;
 }
 
+/* === Bagian Proyek & Tentang Kami === */
 .projects, .about {
-  padding: 25px;
+  background: #0f2f50;
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  text-align: center;
 }
 
 .projects h2, .about h2 {
   color: #00aaff;
   border-bottom: 2px solid #00aaff;
   padding-bottom: 5px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.projects h3 {
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.projects p, .about p {
+  color: #c7dcf5;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 footer {
@@ -91,8 +114,10 @@ footer {
   background: #061c2c;
   color: #aaa;
   font-size: 14px;
+  margin-top: 40px;
 }
 
+/* Responsif untuk HP */
 @media (max-width: 768px) {
   .profile {
     flex-direction: column;
@@ -102,5 +127,9 @@ footer {
   .foto-profil {
     width: 130px;
     height: 130px;
+  }
+
+  .projects, .about {
+    width: 95%;
   }
 }
