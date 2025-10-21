@@ -1,56 +1,61 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portofolio Sahlan & Ariq</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Sahlan & Ariq</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
 
-  <body>
-    <div class="container">
-      <h1 class="judul">Selamat datang di website portofolio kami!</h1>
-
-      <div class="profil-wrapper">
+    <!-- Bagian Profil -->
+    <section class="profil">
+      <h1>🌟 Profil Kami</h1>
+      <div class="kartu-container">
         <div class="kartu-profil">
-          <img src="img/sahlan.jpg" alt="Foto Muhammad Sahlan" />
+          <img src="sahlan.png" alt="Foto Sahlan">
           <h2>Muhammad Sahlan</h2>
-          <p>Siswa TKJ | Desainer UI/UX | Pecinta Figma</p>
-          <a href="https://www.wikipedia.org/" target="_blank">Kunjungi Situs Sahlan</a>
-          <button onclick="alert('Halo! Terima kasih telah berkunjung ke profil Sahlan!')">Sapa Sahlan!</button>
+          <p>Siswa SMKN 1 Tanjunganom, jurusan TKJ. Minat di UI/UX, desain, dan cabling.</p>
+          <button class="btn-sapa" onclick="sapa('Sahlan')">Sapa Sahlan</button>
         </div>
-
         <div class="kartu-profil">
-          <img src="img/ariq.jpg" alt="Foto Ariq" />
+          <img src="ariq.png" alt="Foto Ariq">
           <h2>Ariq</h2>
-          <p>Siswa TKJ | Web Developer | Hobi Coding dan Teknologi</p>
-          <a href="https://www.wikipedia.org/" target="_blank">Kunjungi Situs Ariq</a>
-          <button onclick="alert('Halo! Terima kasih telah berkunjung ke profil Ariq!')">Sapa Ariq!</button>
+          <p>Siswa kreatif dan pekerja keras. Hobi di dunia jaringan dan teknologi.</p>
+          <button class="btn-sapa" onclick="sapa('Ariq')">Sapa Ariq</button>
         </div>
       </div>
+    </section>
 
-      <section class="tentang">
-        <h2>Tentang Kami</h2>
-        <p>
-          Kami adalah siswa SMKN 1 Tanjunganom jurusan Teknik Komputer dan Jaringan.
-          Kami memiliki minat besar dalam dunia teknologi, jaringan, dan desain antarmuka.
-          Kami percaya bahwa kolaborasi dan semangat belajar dapat menciptakan karya luar biasa.
-        </p>
-      </section>
-
-      <section class="proyek">
-        <h2>Proyek & Karya Kami</h2>
-        <div class="proyek-item">
-          <img src="img/figma.jpg" alt="Desain Figma" />
-          <p>Desain antarmuka aplikasi menggunakan Figma untuk meningkatkan pengalaman pengguna.</p>
+    <!-- Bagian Portofolio -->
+    <section class="portofolio">
+      <h1>💼 Portofolio</h1>
+      <div class="kartu-container">
+        <div class="kartu-proyek">
+          <h3>Desain UI Website</h3>
+          <p>Proyek desain menggunakan Figma untuk tampilan web sekolah.</p>
         </div>
-        <div class="proyek-item">
-          <img src="img/web.jpg" alt="Website Project" />
-          <p>Pembuatan website portofolio interaktif untuk menampilkan hasil karya kami.</p>
+        <div class="kartu-proyek">
+          <h3>Instalasi Jaringan LAN</h3>
+          <p>Praktik perakitan jaringan LAN di lab sekolah dengan hasil koneksi stabil.</p>
         </div>
-      </section>
-    </div>
+        <div class="kartu-proyek">
+          <h3>Web Profil Pribadi</h3>
+          <p>Membuat website profil dengan HTML, CSS, dan JavaScript dasar.</p>
+        </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
-  </body>
+    <!-- Bagian Kontak -->
+    <section class="kontak">
+      <h1>📬 Hubungi Kami</h1>
+      <p>Ingin kenal lebih dekat? Kirim pesan atau kunjungi profil media sosial kami!</p>
+      <a href="https://www.instagram.com/" target="_blank" class="btn-ig">Instagram</a>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
